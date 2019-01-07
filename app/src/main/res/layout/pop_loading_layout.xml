@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    android:id="@+id/custom_id_pop_background"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:paddingTop="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/custom_drawable_loading_pop_bg" >
+
+        <ProgressBar
+            android:maxWidth="32dp"
+            android:minWidth="32dp"
+            android:maxHeight="32dp"
+            android:minHeight="32dp"
+            android:indeterminate="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDuration="1800"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/custom_id_pop_progress"
+            style="@style/AlertDialog.AppCompat.Light" />
+
+        <TextView
+            android:textSize="15sp"
+            android:gravity="center"
+            android:maxWidth="120dp"
+            android:singleLine="true"
+            tools:text="玩命加载中..."
+            android:textColor="#FFFFFFFF"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/custom_id_pop_text01"
+            android:layout_below="@id/custom_id_pop_progress" />
+    </RelativeLayout>
+</RelativeLayout>

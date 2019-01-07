@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">useful</string>
+
+    <string name="first_tab">第1</string>
+    <string name="two_tab">第2</string>
+    <string name="three_tab">第3</string>
+    <string name="four_tab">第4</string>
 </resources>
