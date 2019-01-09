@@ -2,7 +2,7 @@ package com.xyd.useful.ui.manager;
 
 
 
-import com.xyd.useful.ui.BaseActivity;
+import com.xyd.useful.ui.activity.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 
 import com.uber.autodispose.AutoDisposeConverter;
 import com.xyd.useful.R;
-import com.xyd.useful.ui.BaseActivity;
+import com.xyd.useful.ui.activity.BaseActivity;
 import com.xyd.useful.util.RxLifecycleUtils;
 
 import butterknife.ButterKnife;

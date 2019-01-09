@@ -5,4 +5,8 @@
     <string name="two_tab">第2</string>
     <string name="three_tab">第3</string>
     <string name="four_tab">第4</string>
+
+    <string name="behavior_sample_title">com.xyd.useful.ui.behavior.SampleTitleBehavior</string>
+    <string name="behavior_sample_header">com.xyd.useful.ui.behavior.SampleHeaderBehavior</string>
+    <string name="behavior_recyclerview">com.xyd.useful.ui.behavior.RecyclerViewBehavior</string>
 </resources>
