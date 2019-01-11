@@ -8,7 +8,7 @@ import android.view.View;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.xyd.useful.R;
-import com.xyd.useful.ui.activity.CoordinatorLayoutDemoListActivity;
+import com.xyd.useful.ui.activity.FragmentDemoListActivity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +21,7 @@ public class ThreeFragment extends BaseFragment {
     RecyclerView recyclerView;
 
     private List<String> mDatas;
-    private String[] items = {"CoordinatorLayoutDemo","demo","demo2", "demo3"};
+    private String[] items = {"CoordinatorLayoutDemo","CardViewDemo", "demo3"};
     private BaseQuickAdapter mBaseQuickAdapter;
 
     @Override
@@ -49,10 +49,8 @@ public class ThreeFragment extends BaseFragment {
     }
 
     private void toActivity(String item) {
-        Intent intent = new Intent(getContext(), CoordinatorLayoutDemoListActivity.class);
-        if("CoordinatorLayoutDemo".equals(item)){
-            intent.setClass(getContext(), CoordinatorLayoutDemoListActivity.class);
-        }
+        Intent intent = new Intent(getContext(), FragmentDemoListActivity.class);
+        intent.putExtra(FragmentDemoListActivity.TYPE, item);
         startActivity(intent);
     }
 

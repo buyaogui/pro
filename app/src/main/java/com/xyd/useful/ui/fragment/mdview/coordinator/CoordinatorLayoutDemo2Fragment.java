@@ -1,13 +1,7 @@
-package com.xyd.useful.ui.fragment.coordinator;
+package com.xyd.useful.ui.fragment.mdview.coordinator;
 
-import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -16,23 +10,16 @@ import com.xyd.useful.R;
 import com.xyd.useful.ui.fragment.BaseFragment;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 
-public class CoordinatorLayoutDemo1Fragment extends BaseFragment {
-    //recyclerView滑动顶部的title跟随动画
-    @BindView(R.id.toolbar_layout)
-    CollapsingToolbarLayout toolbarLayout;
-    @BindView(R.id.app_bar)
-    AppBarLayout appBar;
+public class CoordinatorLayoutDemo2Fragment extends BaseFragment {
+    //list顶部有图片，滑动到图片位置会定住一下
     @BindView(R.id.my_list)
     RecyclerView myList;
-    @BindView(R.id.title)
-    TextView title;
+    @BindView(R.id.header)
+    TextView header;
 
     private List<String> mDatas;
     private BaseQuickAdapter mBaseQuickAdapter;
@@ -60,7 +47,7 @@ public class CoordinatorLayoutDemo1Fragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_coordinator_demo1;
+        return R.layout.fragment_coordinator_demo2;
     }
 
 

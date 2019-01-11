@@ -10,26 +10,30 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.xyd.useful.R;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import butterknife.BindView;
 
-public class CoordinatorLayoutDemoListActivity extends BaseActivity {
+public class FragmentDemoListActivity extends BaseActivity {
     @BindView(R.id.recyclerView)
     RecyclerView recyclerView;
 
+    public static String TYPE = "fragment_demo_list_type";
+    private String demo_list_type;
     private List<String> mDatas = new ArrayList<>();
 //    private String[] items = {"demo1", "demo2","demo3","demo4"};
     private BaseQuickAdapter mBaseQuickAdapter;
 
     @Override
     protected void initView() {
+        demo_list_type = getIntent().getStringExtra(TYPE);
 //        mDatas = Arrays.asList(items);
-        for (int i=1;i<40;i++){
-            mDatas.add("demo"+i);
+        if("CoordinatorLayoutDemo".equals(demo_list_type)) {
+            addDemoList(4);
+        }else if("CardViewDemo".equals(demo_list_type)) {
+            addDemoList(1);
         }
-        mBaseQuickAdapter = new BaseQuickAdapter<String, BaseViewHolder>(R.layout.recycle_item_grid_tv, mDatas) {
+        mBaseQuickAdapter = new BaseQuickAdapter<String, BaseViewHolder>(R.layout.recycle_item_list_tv, mDatas) {
             @Override
             protected void convert(BaseViewHolder helper, String item) {
                 setRecyclerData(helper, item);
@@ -41,8 +45,8 @@ public class CoordinatorLayoutDemoListActivity extends BaseActivity {
     }
 
     private void setRecyclerData(BaseViewHolder helper, String item) {
-        helper.setText(R.id.grid_item_do_tv, item);
-        helper.getView(R.id.grid_item_do_tv).setOnClickListener(new View.OnClickListener() {
+        helper.setText(R.id.list_tv, item);
+        helper.getView(R.id.list_tv).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toActivity(item);
@@ -50,10 +54,17 @@ public class CoordinatorLayoutDemoListActivity extends BaseActivity {
         });
     }
 
-    private void toActivity(String type) {
-        Intent intent = new Intent(this, CoordinatorLayoutDemoShowActivity.class);
-        intent.putExtra(CoordinatorLayoutDemoShowActivity.TYPE, type);
+    private void toActivity(String demo_show_type) {
+        Intent intent = new Intent(this, FragmentDemoShowActivity.class);
+        intent.putExtra(FragmentDemoShowActivity.TYPE, demo_show_type);
+        intent.putExtra(FragmentDemoListActivity.TYPE, demo_list_type);
         startActivity(intent);
+    }
+
+    private void addDemoList(int num){
+        for (int i = 1; i <= num; i++) {
+            mDatas.add("demo" + i);
+        }
     }
 
     @Override

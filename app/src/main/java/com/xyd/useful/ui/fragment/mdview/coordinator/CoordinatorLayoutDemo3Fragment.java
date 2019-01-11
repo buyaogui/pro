@@ -1,4 +1,4 @@
-package com.xyd.useful.ui.fragment.coordinator;
+package com.xyd.useful.ui.fragment.mdview.coordinator;
 
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;

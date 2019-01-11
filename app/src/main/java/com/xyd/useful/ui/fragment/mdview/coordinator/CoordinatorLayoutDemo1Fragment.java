@@ -1,4 +1,4 @@
-package com.xyd.useful.ui.fragment.coordinator;
+package com.xyd.useful.ui.fragment.mdview.coordinator;
 
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -16,12 +16,16 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class CoordinatorLayoutDemo2Fragment extends BaseFragment {
-    //list顶部有图片，滑动到图片位置会定住一下
+public class CoordinatorLayoutDemo1Fragment extends BaseFragment {
+    //recyclerView滑动顶部的title跟随动画
+    @BindView(R.id.toolbar_layout)
+    CollapsingToolbarLayout toolbarLayout;
+    @BindView(R.id.app_bar)
+    AppBarLayout appBar;
     @BindView(R.id.my_list)
     RecyclerView myList;
-    @BindView(R.id.header)
-    TextView header;
+    @BindView(R.id.title)
+    TextView title;
 
     private List<String> mDatas;
     private BaseQuickAdapter mBaseQuickAdapter;
@@ -49,7 +53,7 @@ public class CoordinatorLayoutDemo2Fragment extends BaseFragment {
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_coordinator_demo2;
+        return R.layout.fragment_coordinator_demo1;
     }
 
 

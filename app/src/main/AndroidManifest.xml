@@ -18,8 +18,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.CoordinatorLayoutDemoListActivity"/>
-        <activity android:name=".ui.activity.CoordinatorLayoutDemoShowActivity"/>
+        <activity android:name=".ui.activity.FragmentDemoListActivity"/>
+        <activity android:name=".ui.activity.FragmentDemoShowActivity"/>
+        <activity android:name=".ui.activity.ActivityDemoListActivity"/>
+        <activity android:name=".ui.activity.NavigationDrawerDemo1Activity"/>
+        <activity android:name=".ui.activity.NavigationDrawerDemo2Activity"/>
     </application>
 
 </manifest>

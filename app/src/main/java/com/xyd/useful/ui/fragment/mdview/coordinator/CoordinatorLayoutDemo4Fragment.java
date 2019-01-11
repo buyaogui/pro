@@ -1,7 +1,6 @@
-package com.xyd.useful.ui.fragment.coordinator;
+package com.xyd.useful.ui.fragment.mdview.coordinator;
 
 import android.graphics.Color;
-import android.os.Build;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
@@ -10,17 +9,15 @@ import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.xyd.useful.R;
 import com.xyd.useful.listener.AppBarStateChangeListener;
-import com.xyd.useful.ui.activity.CoordinatorLayoutDemoShowActivity;
-import com.xyd.useful.ui.activity.MainActivity;
 import com.xyd.useful.ui.adapter.ListFgVgAdapter;
 import com.xyd.useful.ui.fragment.BaseFragment;
 import com.xyd.useful.ui.fragment.ListFragment;
@@ -61,7 +58,7 @@ public class CoordinatorLayoutDemo4Fragment extends BaseFragment {
 //            getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 //        }
 
-        CoordinatorLayoutDemoShowActivity activity = (CoordinatorLayoutDemoShowActivity)getActivity();
+        AppCompatActivity activity = (AppCompatActivity)getActivity();
         activity.setSupportActionBar(toolbar2);
         activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar2.setNavigationOnClickListener(new View.OnClickListener() {
