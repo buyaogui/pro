@@ -38,6 +38,8 @@ public class FragmentDemoListActivity extends BaseActivity {
             addDemoList(2);
         }else if("SnackbarDemo".equals(demo_list_type)){
             addDemoList(1);
+        }else if("TabLayoutDemo".equals(demo_list_type)){
+            addDemoList(1);
         }
         mBaseQuickAdapter = new BaseQuickAdapter<String, BaseViewHolder>(R.layout.recycle_item_list_tv, mDatas) {
             @Override

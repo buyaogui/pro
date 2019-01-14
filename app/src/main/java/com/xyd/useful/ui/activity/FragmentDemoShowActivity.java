@@ -17,6 +17,7 @@ import com.xyd.useful.ui.fragment.mdview.fab.FabDemo3Fragment;
 import com.xyd.useful.ui.fragment.mdview.palette.PaletteDemo1Fragment;
 import com.xyd.useful.ui.fragment.mdview.palette.PaletteDemo2Fragment;
 import com.xyd.useful.ui.fragment.mdview.snackbar.SnackbarDemo1Fragment;
+import com.xyd.useful.ui.fragment.mdview.tablayout.TablayoutDemo1Fragment;
 
 public class FragmentDemoShowActivity extends BaseActivity {
 
@@ -62,6 +63,10 @@ public class FragmentDemoShowActivity extends BaseActivity {
         }else if("SnackbarDemo".equals(demo_list_type)) {
             if ("demo1".equals(demo_show_type)) {
                 fragment = new SnackbarDemo1Fragment();
+            }
+        }else if("TabLayoutDemo".equals(demo_list_type)){
+            if ("demo1".equals(demo_show_type)) {
+                fragment = new TablayoutDemo1Fragment();
             }
         }
         addFragment(fragment);

@@ -22,7 +22,7 @@ public class ThreeFragment extends BaseFragment {
 
     private List<String> mDatas;
     private String[] items = {"CoordinatorLayoutDemo","MdSimpleViewDemo", "FloatingActionButtonDemo",
-            "PaletteDemo", "SnackbarDemo"};
+            "PaletteDemo", "SnackbarDemo", "TabLayoutDemo"};
     private BaseQuickAdapter mBaseQuickAdapter;
 
     @Override
