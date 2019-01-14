@@ -21,7 +21,8 @@ public class ThreeFragment extends BaseFragment {
     RecyclerView recyclerView;
 
     private List<String> mDatas;
-    private String[] items = {"CoordinatorLayoutDemo","CardViewDemo", "demo3"};
+    private String[] items = {"CoordinatorLayoutDemo","MdSimpleViewDemo", "FloatingActionButtonDemo",
+            "PaletteDemo", "SnackbarDemo"};
     private BaseQuickAdapter mBaseQuickAdapter;
 
     @Override

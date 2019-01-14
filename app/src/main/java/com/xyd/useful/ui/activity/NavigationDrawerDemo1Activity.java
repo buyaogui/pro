@@ -2,12 +2,11 @@ package com.xyd.useful.ui.activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.xyd.useful.R;
@@ -42,11 +41,26 @@ public class NavigationDrawerDemo1Activity extends BaseActivity{
         toggle.syncState();//该方法会自动和Toolbar关联, 将开关的图片显示在了Toolbar上
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                // Handle navigation view item clicks here.
-                int id = item.getItemId();
-                Log.v("afsafsfassfa","id="+item.getItemId()+";title="+item.getTitle());
-                drawerLayout.closeDrawer(GravityCompat.START);
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.nav_camera:
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new FragmentOne()).commit();可以做动态替换fragment
+                    Snackbar.make(navView, menuItem.getTitle(), Snackbar.LENGTH_SHORT).show();
+                    break;
+                    case R.id.nav_gallery:
+                        Snackbar.make(navView, menuItem.getTitle(), Snackbar.LENGTH_SHORT).show();
+                        break;
+                    case R.id.nav_slideshow:
+                    case R.id.nav_manage:
+                    case R.id.nav_share:
+                    case R.id.nav_send:
+                        Snackbar.make(navView, menuItem.getTitle(), Snackbar.LENGTH_SHORT).show();
+                        break;
+                }
+                menuItem.setChecked(true);//点击了把它设为选中状态
+                drawerLayout.closeDrawers();//关闭抽屉
+//                navView.setCheckedItem(menuItem.getItemId());
+//                drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
         });

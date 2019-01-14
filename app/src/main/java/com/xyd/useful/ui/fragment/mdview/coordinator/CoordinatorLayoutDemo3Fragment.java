@@ -50,7 +50,7 @@ public class CoordinatorLayoutDemo3Fragment extends BaseFragment {
         }
         // 第二步：为ViewPager设置适配器
         ListFgVgAdapter adapter =
-                new ListFgVgAdapter(getContext(), getActivity().getSupportFragmentManager(), mTitles, mFragments, null);
+                new ListFgVgAdapter(getContext(), getFragmentManager(), mTitles, mFragments, null);
 
         viewpagerOne.setOffscreenPageLimit(mFragments.size());
         viewpagerOne.setAdapter(adapter);

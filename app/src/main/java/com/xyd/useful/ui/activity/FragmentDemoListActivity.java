@@ -29,8 +29,14 @@ public class FragmentDemoListActivity extends BaseActivity {
         demo_list_type = getIntent().getStringExtra(TYPE);
 //        mDatas = Arrays.asList(items);
         if("CoordinatorLayoutDemo".equals(demo_list_type)) {
-            addDemoList(4);
-        }else if("CardViewDemo".equals(demo_list_type)) {
+            addDemoList(5);
+        }else if("MdSimpleViewDemo".equals(demo_list_type)) {
+            addDemoList(1);
+        }else if("FloatingActionButtonDemo".equals(demo_list_type)){
+            addDemoList(3);
+        }else if("PaletteDemo".equals(demo_list_type)){
+            addDemoList(2);
+        }else if("SnackbarDemo".equals(demo_list_type)){
             addDemoList(1);
         }
         mBaseQuickAdapter = new BaseQuickAdapter<String, BaseViewHolder>(R.layout.recycle_item_list_tv, mDatas) {

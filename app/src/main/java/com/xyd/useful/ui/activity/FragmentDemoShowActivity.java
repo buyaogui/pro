@@ -5,11 +5,18 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
 import com.xyd.useful.R;
-import com.xyd.useful.ui.fragment.mdview.cardview.CardViewDemo1Fragment;
+import com.xyd.useful.ui.fragment.mdview.simpleview.MdViewDemo1Fragment;
 import com.xyd.useful.ui.fragment.mdview.coordinator.CoordinatorLayoutDemo1Fragment;
 import com.xyd.useful.ui.fragment.mdview.coordinator.CoordinatorLayoutDemo2Fragment;
 import com.xyd.useful.ui.fragment.mdview.coordinator.CoordinatorLayoutDemo3Fragment;
 import com.xyd.useful.ui.fragment.mdview.coordinator.CoordinatorLayoutDemo4Fragment;
+import com.xyd.useful.ui.fragment.mdview.coordinator.CoordinatorLayoutDemo5Fragment;
+import com.xyd.useful.ui.fragment.mdview.fab.FabDemo1Fragment;
+import com.xyd.useful.ui.fragment.mdview.fab.FabDemo2Fragment;
+import com.xyd.useful.ui.fragment.mdview.fab.FabDemo3Fragment;
+import com.xyd.useful.ui.fragment.mdview.palette.PaletteDemo1Fragment;
+import com.xyd.useful.ui.fragment.mdview.palette.PaletteDemo2Fragment;
+import com.xyd.useful.ui.fragment.mdview.snackbar.SnackbarDemo1Fragment;
 
 public class FragmentDemoShowActivity extends BaseActivity {
 
@@ -31,10 +38,30 @@ public class FragmentDemoShowActivity extends BaseActivity {
                 fragment = new CoordinatorLayoutDemo3Fragment();
             } else if ("demo4".equals(demo_show_type)) {
                 fragment = new CoordinatorLayoutDemo4Fragment();
+            } else if ("demo5".equals(demo_show_type)) {
+                fragment = new CoordinatorLayoutDemo5Fragment();
             }
-        }else if("CardViewDemo".equals(demo_list_type)){
+        }else if("MdSimpleViewDemo".equals(demo_list_type)){
             if ("demo1".equals(demo_show_type)) {
-                fragment = new CardViewDemo1Fragment();
+                fragment = new MdViewDemo1Fragment();
+            }
+        }else if("FloatingActionButtonDemo".equals(demo_list_type)){
+            if ("demo1".equals(demo_show_type)) {
+                fragment = new FabDemo1Fragment();
+            }else if ("demo2".equals(demo_show_type)) {
+                fragment = new FabDemo2Fragment();
+            }else if ("demo3".equals(demo_show_type)) {
+                fragment = new FabDemo3Fragment();
+            }
+        }else if("PaletteDemo".equals(demo_list_type)){
+            if ("demo1".equals(demo_show_type)) {
+                fragment = new PaletteDemo1Fragment();
+            }else if ("demo2".equals(demo_show_type)) {
+                fragment = new PaletteDemo2Fragment();
+            }
+        }else if("SnackbarDemo".equals(demo_list_type)) {
+            if ("demo1".equals(demo_show_type)) {
+                fragment = new SnackbarDemo1Fragment();
             }
         }
         addFragment(fragment);

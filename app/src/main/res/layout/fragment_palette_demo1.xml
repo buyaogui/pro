@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/tvVibrantColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="VibrantColor\n获取图片中最活跃的颜色" />
+
+        <TextView
+            android:id="@+id/tvMutedColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="MutedColor\n获取图片中一个最柔和的颜色" />
+
+        <TextView
+            android:id="@+id/tvDarkVibrantColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="DarkVibrantColor\n获取到活跃的深色的颜色" />
+
+        <TextView
+            android:id="@+id/tvDarkMutedColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="DarkMutedColor\n获取到柔和的深色的颜色" />
+
+
+
+        <TextView
+            android:id="@+id/tvLightVibrantColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="LightVibrantColor\n获取到活跃的明亮的颜色" />
+
+
+        <TextView
+            android:id="@+id/tvLightMutedColor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="LightMutedColor\n获取到柔和的明亮的颜色" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
